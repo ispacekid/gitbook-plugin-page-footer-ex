@@ -1,4 +1,3 @@
-
 /**
  * 处理默认参数
  * @param defaultOption
@@ -16,8 +15,8 @@ function handlerOption(defaultOption, configOption) {
 
 function start(bookIns, page) {
     const defaultOption = {
-        copyright: 'for GitBook.',
-        update_label: 'update : ',
+        copyright: '© GitBook',
+        update_label: 'Updated: ',
         update_format: 'YYYY-MM-DD HH:mm:ss'
     }
     /**
@@ -31,8 +30,7 @@ function start(bookIns, page) {
     var _copy = '<span class="page-footer-ex-copyright">' + defaultOption.copyright + '</span>'
     var wrap = ' \n\n' +
         '<footer class="page-footer-ex"> ' +
-                _copy +
-            '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' +
+            _copy +
             '<span class="page-footer-ex-footer-update">' + defaultOption.update_label +
                 '\n{{ file.mtime | dateFormat("' + defaultOption.update_format + '") }}\n' +
             '</span>' +
